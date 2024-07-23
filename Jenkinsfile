@@ -2,35 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('build-dev') {
+        stage('deploy to dev') {
             steps {
                 echo 'Hello World out'
             }
         }
-    }
-    stages {
-        stage('test now') {
+    
+    
+        stage('test to qa') {
             steps {
                 echo 'Hello World in'
             }
         }
-    }
-    stages {
-        stage('deploy') {
+    
+
+        stage('deploy to prod') {
             steps {
-                echo 'Hello World here'
+                echo 'Hello deploy to prod'
             }
         }
     }
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World over'
-            }
-        }
-    }
-
-
+    
 
 }
